@@ -300,11 +300,6 @@ public class Agent implements ClassFileTransformer {
                         MessageUpdate("Mouse held.");
                     } else
                         lastRButtonPressTime = System.currentTimeMillis();
-                } else if (A != null && canDraw && e.getKeyChar() == '`' && e.getKeyLocation() == 0
-                        && CoordsOverItem(new Point(A.getMousePosition().x, A.getMousePosition().y))) {
-                    ItemProtection(new Point(A.getMousePosition().x, A.getMousePosition().y));
-                } else if (A != null && canDraw && e.getKeyChar() == '\t' && e.getKeyLocation() == 0) {
-                    DropItems();
                 } else if (canDraw && e.getKeyCode() == KeyEvent.VK_ESCAPE) {
                     drawStringTime = System.currentTimeMillis();
                 }
